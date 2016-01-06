@@ -1,0 +1,32 @@
+<!doctype html>
+<title>ISO-8601</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+html{
+	height: 100%;
+}
+body{
+	background: black;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+pre {
+	font-size: 5vh;
+	color: white;
+}
+</style>
+<pre>
+ISO-8601
+</pre>
+<script>
+function update(){
+	document.querySelector('pre').textContent = document.title = new Date().toISOString();
+	window.requestAnimationFrame(update);
+}
+window.requestAnimationFrame(update);
+</script>
